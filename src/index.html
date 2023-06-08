@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Чат</title>
+  </head>
+  <body>
+    <div>
+      <span>Мой чат</span>
+    </div>
+    <div
+      class="messenger"
+      style="
+        border: 1px solid gray;
+        height: 300px;
+        width: 500px;
+        overflow-y: scroll;
+        margin: 50px;
+        padding: 10px;
+      "
+    ></div>
+    <form class="formMessage" action="" method="post">
+      <input name="name" type="text" class="name" placeholder="Ваше имя" required>
+      <input name="inputMessage" type="text" class="inputMessage" placeholder="Ваше сообщение" required>
+      <button type="submit" class="send">Отправить</button>
+    </form>
+    <div class="error"></div>
+  <div class="smiles">
+    <a href="#"><img src="images/angry.svg" alt=""></a>
+    <a href="#"><img src="images/cool.svg" alt=""></a>
+    <a href="#"><img src="images/sleep.svg" alt=""></a>
+    <a href="#"><img src="images/think.svg" alt=""></a>
+    <a href="#"><img src="images/tired.svg" alt=""></a>
+    <a href="#"><img src="images/tongue.svg" alt=""></a>
+  </div>
+  </body>
+</html>
