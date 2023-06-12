@@ -16,7 +16,7 @@ module.exports = (env) => ({
     path: path.resolve(__dirname, "dist"),
     filename: "[name]-[hash].js",
     clean: {
-      dry: true
+      dry: true,
     },
     environment: {
       arrowFunction: false,

@@ -1,11 +1,16 @@
 .smiles img {
-    width: 40px;
-    margin-right: 20px;
+  width: 40px;
+  margin-right: 20px;
 }
+
+.messenger img {
+  width: 20px;
+}
+
 .smiles {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .inputMessage {
-    width: 400px;
+  width: 400px;
 }

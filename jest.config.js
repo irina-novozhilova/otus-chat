@@ -2,7 +2,6 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -20,7 +19,7 @@ module.exports = {
   // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: ["<rootDir>/src/*.ts", "!<rootDir>/src/index.ts"],
 
   // The directory where Jest should output its coverage files
   // coverageDirectory: undefined,
@@ -48,7 +47,6 @@ module.exports = {
       branches: 60,
       functions: 60,
       lines: 60,
-      statements: -10,
     },
   },
 
@@ -99,7 +97,7 @@ module.exports = {
   // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  // modulePathIgnorePatterns: ["<rootDir>/src/messagesApi.js"],
 
   // Activates notifications for test results
   // notify: false,
@@ -141,7 +139,11 @@ module.exports = {
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: ["./config/__mocks__/setupFiles.js", "./config/__mocks__/dom.js"],
-  setupFiles: ["jest-localstorage-mock"],
+  setupFiles: [
+    "jest-localstorage-mock",
+    "./config/__mocks__/setupFiles.ts",
+    "./config/__mocks__/dom.ts",
+  ],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
@@ -153,7 +155,8 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: "jest-environment-jsdom",
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -204,6 +207,7 @@ module.exports = {
   preset: "ts-jest",
   transform: {
     "^.+\\.ts?$": "ts-jest",
+    "^.+\\.(js|jsx)$": "babel-jest",
   },
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
 };

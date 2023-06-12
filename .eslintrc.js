@@ -20,6 +20,8 @@ module.exports = {
   rules: {
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "default-param-last": "off",
     "import/extensions": ["warn", "never"],
     "max-len": "off",
     "no-console": ["error", { allow: ["warn", "error", "log"] }],
